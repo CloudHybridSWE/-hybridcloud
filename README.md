@@ -84,4 +84,4 @@ A infraestrutura interna é composta por:
 
 O tráfego interno passa pelo firewall antes de sair para a internet, garantindo controle, inspeção e segurança da comunicação.
 
-![Laboratório](images/2.%20lab.png)
+![Laboratório](images/2.lab.png)
