@@ -1,7 +1,9 @@
 
 # 📌 Projeto – Infraestrutura de Cloud Híbrida
 
-Implementação de uma infraestrutura de **Cloud Híbrida**, integrando ambiente **on-premises** com a nuvem **:contentReference[oaicite:0]{index=0} (AWS)**.
+![Planta](images/1.%20planta.png)
+
+Implementação de uma infraestrutura de **Cloud Híbrida**, integrando ambiente **on-premises** com a nuvem 
 
 O cenário simula uma pequena empresa com usuários internos, acesso remoto seguro e integração com a nuvem para backup e continuidade do negócio.
 
@@ -44,15 +46,3 @@ Responsável por identidade, autenticação e armazenamento principal de arquivo
 Comunicação via **VPN Site-to-Site**, garantindo tráfego seguro entre os ambientes.
 
 ---
-
-## 🎯 Objetivo
-
-Demonstrar uma arquitetura híbrida funcional, segura e escalável, com:
-
-- Gerenciamento centralizado  
-- Controle de acesso  
-- Backup local e em nuvem  
-- Acesso remoto seguro  
-- Integração entre on-premises e cloud  
-
-![Planta](images/1.%20planta.png)
