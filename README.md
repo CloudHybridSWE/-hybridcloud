@@ -85,3 +85,104 @@ A infraestrutura interna é composta por:
 O tráfego interno passa pelo firewall antes de sair para a internet, garantindo controle, inspeção e segurança da comunicação.
 
 ![Laboratório](images/2.lab.png)
+
+# 📌 Active Directory, DHCP e Segmentação de Rede
+
+O **:contentReference[oaicite:0]{index=0}** centraliza o controle de acesso e a gestão de identidades dentro da infraestrutura.
+
+O serviço de **DHCP** foi centralizado no **Windows Server**, permitindo integração direta com o Active Directory e o **DNS**, garantindo automação, consistência e facilidade na administração da rede.
+
+---
+
+## 🌐 Configuração do DHCP (Segmentação por VLANs)
+
+### 🔹 T.I – VLAN 10 (/26 – 62 hosts)
+
+- Rede: `192.168.10.0`
+- Máscara: `255.255.255.192`
+- Gateway: `192.168.10.1`
+- Primeiro Host: `192.168.10.1`
+- Último Host: `192.168.10.62`
+- Broadcast: `192.168.10.63`
+
+---
+
+### 🔹 Administração – VLAN 20 (/26 – 62 hosts)
+
+- Rede: `192.168.10.64`
+- Máscara: `255.255.255.192`
+- Gateway: `192.168.10.65`
+- Primeiro Host: `192.168.10.65`
+- Último Host: `192.168.10.126`
+- Broadcast: `192.168.10.127`
+
+---
+
+### 🔹 Comercial – VLAN 30 (/26 – 62 hosts)
+
+- Rede: `192.168.10.128`
+- Máscara: `255.255.255.192`
+- Gateway: `192.168.10.129`
+- Primeiro Host: `192.168.10.129`
+- Último Host: `192.168.10.190`
+- Broadcast: `192.168.10.191`
+
+---
+
+### 🔹 CFTV (Infraestrutura) – VLAN 40 (/28 – 14 hosts)
+
+- Rede: `192.168.10.192`
+- Máscara: `255.255.255.240`
+- Gateway: `192.168.10.193`
+- Primeiro Host: `192.168.10.193`
+- Último Host: `192.168.10.206`
+- Broadcast: `192.168.10.207`
+
+---
+
+### 🔹 Access Point – VLAN 50 (/28 – 14 hosts)
+
+- Rede: `192.168.10.208`
+- Máscara: `255.255.255.240`
+- Gateway: `192.168.10.209`
+- Primeiro Host: `192.168.10.209`
+- Último Host: `192.168.10.222`
+- Broadcast: `192.168.10.223`
+
+---
+
+## 🖥️ DHCP em Funcionamento
+
+![DHCP](images/3.%20DHCP.PNG)
+
+---
+
+## 👥 Grupos de Usuários (Active Directory)
+
+Foram criados grupos para organização e controle de acesso por setor:
+
+- `GRP-ADM`
+- `GRP-COM`
+- `GRP-TI`
+
+![GRP](images/4.%20GRP.PNG)
+
+---
+
+## ⚙️ Políticas de Grupo (GPO)
+
+Foram criadas **GPOs (Group Policy Objects)** para aplicar configurações e restrições específicas por setor:
+
+- ADM
+- COM
+- TI
+
+![GPO](images/5.%20GPO.PNG)
+
+---
+
+## 🖥️ Virtualização (Hypervisor)
+
+Foi criado um ambiente de virtualização utilizando um hypervisor para simular o ambiente on-premises, com uma máquina rodando **:contentReference[oaicite:1]{index=1}**.
+
+![HYPERVISOR](images/6.%20HYPERVISOR.PNG)
