@@ -186,3 +186,30 @@ Foram criadas **GPOs (Group Policy Objects)** para aplicar configurações e res
 Foi criado um ambiente de virtualização utilizando um hypervisor para simular o ambiente on-premises, com uma máquina rodando **:contentReference[oaicite:1]{index=1}**.
 
 ![HYPERVISOR](images/6.%20HYPERVISOR.PNG)
+
+
+---
+
+# 📌 Documentação da Infraestrutura
+
+Abaixo estão os documentos contendo a configuração de rede da infraestrutura, incluindo endereçamento IP, máscaras, VLANs e serviços utilizados na nuvem.
+
+## 🖥️ 1. T.I
+[Acessar documentação](https://docs.google.com/spreadsheets/d/1f2WQca90ACLv3GuLH0KYVGViBtsSL65fSalYwBg82h4)
+
+---
+
+## 🏢 2. Administrativo e Financeiro
+[Acessar documentação](https://docs.google.com/spreadsheets/d/1Y4ezoiYASlpmDFKRiA7Twg4ZmpV_E8Edw6SvxeivWx0)
+
+---
+
+## 💼 3. Comercial
+[Acessar documentação](https://docs.google.com/spreadsheets/d/1qgJGADnT86ZqXFpUzhB9_cyiJ_ikbbdWk6wVV047_fI)
+
+---
+
+## 🏗️ 4. Infraestrutura Isolada
+[Acessar documentação](https://drive.google.com/file/d/1bX4C4a2ECAayJ-Dx55k4SIlZ3QC6ihVG/view)
+
+---
