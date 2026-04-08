@@ -47,7 +47,7 @@ Comunicação via **VPN Site-to-Site**, garantindo tráfego seguro entre os ambi
 
 ---
 
-# 📌 Descrição da Arquitetura – Laboratório Cloud Híbrida
+# 📌 2. A montagem do ambiente local estrutura a base física da rede
 
 O laboratório representa uma arquitetura de infraestrutura híbrida integrando ambiente local (on-premises), usuários remotos e ambiente em nuvem.
 
