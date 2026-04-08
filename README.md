@@ -190,7 +190,7 @@ Foi criado um ambiente de virtualização utilizando um hypervisor para simular 
 
 ---
 
-# 📌 Documentação da Infraestrutura
+#  7. Documentação da Infraestrutura
 
 Abaixo estão os documentos contendo a configuração de rede da infraestrutura, incluindo endereçamento IP, máscaras, VLANs e serviços utilizados na nuvem.
 
