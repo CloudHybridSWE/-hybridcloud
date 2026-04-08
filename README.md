@@ -1,5 +1,5 @@
 
-# 📌 Projeto – Infraestrutura de Cloud Híbrida
+# 📌 1. O levantamento de requisitos estabelece a fundação da arquitetutura híbrida.
 
 ![Planta](images/1.%20planta.png)
 
