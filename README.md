@@ -192,6 +192,118 @@ Foi criado um ambiente de virtualização utilizando um hypervisor para simular 
 
 #  4. Integração com a AWS
 
+Foi criado um serviço de IAM para definir os seguintes usuários:
+
+👤 👨‍💻 Usuários — TI (5)
+
+
+ti-joao
+ti-maria
+ti-carlos
+ti-ana
+ti-lucas
+👤 🏢 Usuários — Administrativo (4)
+
+Padrão: 
+
+adm-bruna
+adm-ricardo
+adm-patricia
+adm-fernando
+👤 💼 Usuários — Comercial (4)
+
+com-gabriel
+com-juliana
+com-rodrigo
+com-carla
+
+# 🔐 AWS Site-to-Site VPN - Documentação
+
+## 📌 Visão Geral
+Configuração de uma VPN Site-to-Site (IPsec) na AWS, conectando uma infraestrutura on-premises a uma VPC de forma segura, com roteamento estático.
+
+---
+
+## 🧱 Arquitetura
+
+- **Cloud Provider:** AWS  
+- **Tipo de VPN:** Site-to-Site (IPsec)  
+- **Roteamento:** Estático  
+
+### 🌐 Redes
+
+| Ambiente     | CIDR            |
+|--------------|-----------------|
+| On-Premises  | 192.168.10.0/24 |
+| AWS (VPC)    | 10.0.0.0/16     |
+
+---
+
+## 🔑 Componentes
+
+### 🔹 VPC
+- **ID:** vpc-02c21828c7384720d  
+- **CIDR:** 10.0.0.0/16  
+
+### 🔹 Virtual Private Gateway (VGW)
+- **ID:** vgw-0e95cc065d3ebba4b  
+- **Associado à VPC:** Sim  
+
+### 🔹 Customer Gateway (CGW)
+- **ID:** cgw-0d5a645e1eb31f33b  
+- **IP Público:** 200.200.200.1  
+
+
+### 🔹 VPN Connection
+- **ID:** vpn-03a27b7c634bdfc2b  
+- **Tipo:** ipsec.1  
+- **Estado:** Disponível  
+- **Autenticação:** PSK (Pre-Shared Key)  
+- **Túneis:** 2 (Alta Disponibilidade)  
+
+Destino: 192.168.10.0/24 → Target: vgw-0e95cc065d3ebba4b
+
+### 📍 On-Premises
+
+Destino: 10.0.0.0/16 → Gateway: VPN Tunnel
+
+## 🔐 Parâmetros de Segurança
+
+- **Protocolo:** IPsec  
+- **Criptografia:** Negociada via IKE  
+- **Autenticação:** PSK  
+- **Portas:**
+  - UDP 500 (IKE)  
+  - UDP 4500 (NAT-T)  
+
+
+
+## 🔐 Túneis VPN
+
+### 🔹 Tunnel 1
+- **IP Externo AWS (Peer):** 3.149.52.192  
+- **IP Externo Local:** 200.200.200.1  
+- **CIDR Interno:** 169.254.42.52/30  
+
+
+---
+
+### 🔹 Tunnel 2
+- **IP Externo AWS (Peer):** 3.150.152.161  
+- **IP Externo Local:** 200.200.200.1  
+- **CIDR Interno:** 169.254.19.20/30  
+
+
+---
+
+## 🔄 Roteamento
+
+### 📍 AWS (Route Table)
+
+
+
+
+
 
 #  7. Documentação da Infraestrutura
 
