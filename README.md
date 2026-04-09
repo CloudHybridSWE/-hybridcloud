@@ -86,7 +86,7 @@ O tráfego interno passa pelo firewall antes de sair para a internet, garantindo
 
 ![Laboratório](images/2.lab.png)
 
-# 📌 Active Directory, DHCP e Segmentação de Rede
+# 3. Active Directory, DHCP e Segmentação de Rede
 
 O **:contentReference[oaicite:0]{index=0}** centraliza o controle de acesso e a gestão de identidades dentro da infraestrutura.
 
@@ -189,6 +189,9 @@ Foi criado um ambiente de virtualização utilizando um hypervisor para simular 
 
 
 ---
+
+#  4. Integração com a AWS
+
 
 #  7. Documentação da Infraestrutura
 
