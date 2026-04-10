@@ -212,6 +212,8 @@ Foi criado um ambiente de virtualização utilizando um hypervisor para simular 
 | `D:\Storage\Administrativo` | `Financeiro`<br>`Contratos`<br>`Relatorios`<br>`RH`<br>`BACKUP_ADM` |
 | `D:\Storage\Comercial` | `Propostas`<br>`Clientes`<br>`Vendas`<br>`Marketing`<br>`BACKUP_COM` |
 
+![STORAGE](images/storage.png)
+
 ### 📌 Diretrizes de Uso
 
 - **Arquivos em uso** → Devem permanecer nas pastas principais
