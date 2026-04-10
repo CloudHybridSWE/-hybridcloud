@@ -178,6 +178,8 @@ Foram criados grupos para organização e controle de acesso por setor:
 
 ![GRP](images/4.%20GRP.PNG)
 
+
+
 ---
 
 ## ⚙️ Políticas de Grupo (GPO)
@@ -203,27 +205,12 @@ Foi criado um ambiente de virtualização utilizando um hypervisor para simular 
 
 ## 📁 Estrutura de Pastas
 
-D:\Compartilhamentos
-├── TI
-│ ├── Documentacao
-│ ├── Scripts
-│ ├── Projetos
-│ ├── Sistemas
-│ └── BACKUP_TI
-│
-├── Administrativo
-│ ├── Financeiro
-│ ├── Contratos
-│ ├── Relatorios
-│ ├── RH
-│ └── BACKUP_ADM
-│
-└── Comercial
-├── Propostas
-├── Clientes
-├── Vendas
-├── Marketing
-└── BACKUP_COM
+| Caminho | Conteúdo |
+|---|---|
+| `D:\Storage` | Raiz dos compartilhamentos da empresa |
+| `D:\Storage\TI` | `Documentacao`<br>`Scripts`<br>`Projetos`<br>`Sistemas`<br>`BACKUP_TI` |
+| `D:\Storage\Administrativo` | `Financeiro`<br>`Contratos`<br>`Relatorios`<br>`RH`<br>`BACKUP_ADM` |
+| `D:\Storage\Comercial` | `Propostas`<br>`Clientes`<br>`Vendas`<br>`Marketing`<br>`BACKUP_COM` |
 
 ### 📌 Diretrizes de Uso
 
