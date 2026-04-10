@@ -1,4 +1,12 @@
 
+# Índice
+
+- [1. O levantamento de requisitos estabelece a fundação da arquitetutura híbrida.](#sec-1)
+- [3. Active Directory, DHCP e Segmentação de Rede](#sec-3)
+- [4. Integração com a AWS](#sec-4)
+- [7. Documentação da Infraestrutura](#sec-7)
+
+<a id="sec-1"></a>
 # 📌 1. O levantamento de requisitos estabelece a fundação da arquitetutura híbrida.
 
 ![Planta](images/1.%20planta.png)
@@ -86,6 +94,7 @@ O tráfego interno passa pelo firewall antes de sair para a internet, garantindo
 
 ![Laboratório](images/2.lab.png)
 
+<a id="sec-3"></a>
 # 3. Active Directory, DHCP e Segmentação de Rede
 
 O **:contentReference[oaicite:0]{index=0}** centraliza o controle de acesso e a gestão de identidades dentro da infraestrutura.
@@ -179,6 +188,9 @@ Foram criadas **GPOs (Group Policy Objects)** para aplicar configurações e res
 
 ![GPO](images/5.%20GPO.PNG)
 
+
+
+
 ---
 
 ## 🖥️ Virtualização (Hypervisor)
@@ -187,9 +199,40 @@ Foi criado um ambiente de virtualização utilizando um hypervisor para simular 
 
 ![HYPERVISOR](images/6.%20HYPERVISOR.PNG)
 
+## 📁 Estrutura de Pastas
+
+D:\Compartilhamentos
+├── TI
+│ ├── Documentacao
+│ ├── Scripts
+│ ├── Projetos
+│ ├── Sistemas
+│ └── BACKUP_TI
+│
+├── Administrativo
+│ ├── Financeiro
+│ ├── Contratos
+│ ├── Relatorios
+│ ├── RH
+│ └── BACKUP_ADM
+│
+└── Comercial
+├── Propostas
+├── Clientes
+├── Vendas
+├── Marketing
+└── BACKUP_COM
+
+### 📌 Diretrizes de Uso
+
+- **Arquivos em uso** → Devem permanecer nas pastas principais
+- **Arquivos importantes/finalizados** → Devem ser movidos para as pastas de **BACKUP**
+
+
 
 ---
 
+<a id="sec-4"></a>
 #  4. Integração com a AWS
 
 Foi criado um serviço de IAM para definir os seguintes usuários:
@@ -276,7 +319,9 @@ Destino: 10.0.0.0/16 → Gateway: VPN Tunnel
   - UDP 500 (IKE)  
   - UDP 4500 (NAT-T)  
 
+  ![Conexão VPN](images/8.%20VPN.PNG)
 
+---
 
 ## 🔐 Túneis VPN
 
@@ -294,17 +339,19 @@ Destino: 10.0.0.0/16 → Gateway: VPN Tunnel
 - **CIDR Interno:** 169.254.19.20/30  
 
 
----
 
 ## 🔄 Roteamento
 
 ### 📍 AWS (Route Table)
 
+![Conexão VPN](images/9.%20tunnel.png)
 
 
 
 
 
+
+<a id="sec-7"></a>
 #  7. Documentação da Infraestrutura
 
 Abaixo estão os documentos contendo a configuração de rede da infraestrutura, incluindo endereçamento IP, máscaras, VLANs e serviços utilizados na nuvem.
