@@ -237,28 +237,11 @@ Com isso, os dispositivos passaram a herdar automaticamente as **GPOs**, permiss
 
 Foi criado um serviço de IAM para definir os seguintes usuários:
 
-👤 👨‍💻 Usuários — TI (5)
-
-
-ti-joao
-ti-maria
-ti-carlos
-ti-ana
-ti-lucas
-👤 🏢 Usuários — Administrativo (4)
-
-Padrão: 
-
-adm-bruna
-adm-ricardo
-adm-patricia
-adm-fernando
-👤 💼 Usuários — Comercial (4)
-
-com-gabriel
-com-juliana
-com-rodrigo
-com-carla
+| Setor | Quantidade | Usuários |
+|---|---:|---|
+| 👨‍💻 TI | 5 | `ti-joao`<br>`ti-maria`<br>`ti-carlos`<br>`ti-ana`<br>`ti-lucas` |
+| 🏢 Administrativo | 4 | `adm-bruna`<br>`adm-ricardo`<br>`adm-patricia`<br>`adm-fernando` |
+| 💼 Comercial | 4 | `com-gabriel`<br>`com-juliana`<br>`com-rodrigo`<br>`com-carla` |
 
 # 🔐 AWS Site-to-Site VPN - Documentação
 
