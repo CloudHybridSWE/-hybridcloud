@@ -2,6 +2,7 @@
 # Índice
 
 - [1. O levantamento de requisitos estabelece a fundação da arquitetutura híbrida.](#sec-1)
+- [2. A montagem do ambiente local estrutura a base física da rede](#sec-2)
 - [3. Active Directory, DHCP e Segmentação de Rede](#sec-3)
 - [4. Integração com a AWS](#sec-4)
 - [7. Documentação da Infraestrutura](#sec-7)
@@ -55,6 +56,7 @@ Comunicação via **VPN Site-to-Site**, garantindo tráfego seguro entre os ambi
 
 ---
 
+<a id="sec-2"></a>
 # 📌 2. A montagem do ambiente local estrutura a base física da rede
 
 O laboratório representa uma arquitetura de infraestrutura híbrida integrando ambiente local (on-premises), usuários remotos e ambiente em nuvem.
