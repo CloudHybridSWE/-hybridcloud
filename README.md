@@ -214,6 +214,15 @@ Foi criado um ambiente de virtualização utilizando um hypervisor para simular 
 
 ![STORAGE](images/storage.png)
 
+
+## 🔐 Ingresso no Domínio
+
+Para garantir padronização, segurança e aplicação centralizada de políticas, todas as máquinas foram ingressadas no domínio corporativo.
+
+Com isso, os dispositivos passaram a herdar automaticamente as **GPOs**, permissões e configurações integradas ao ambiente local e à AWS.
+
+![Ingresso no Domínio](images/10.%20dominiouser.PNG)
+
 ### 📌 Diretrizes de Uso
 
 - **Arquivos em uso** → Devem permanecer nas pastas principais
