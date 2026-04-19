@@ -29,6 +29,72 @@ O cenário simula uma pequena empresa com usuários internos, acesso remoto segu
 
 Responsável por identidade, autenticação e armazenamento principal de arquivos.
 
+
+## ☁️ Estimativa de Custos - AWS
+
+Esta seção apresenta a estimativa de custos para utilização da infraestrutura em nuvem na **Amazon AWS**, considerando os principais serviços utilizados no cenário híbrido.
+
+---
+
+### 💰 Resumo Geral
+
+| Tipo de Custo           | Valor (USD) | Valor (BRL) |
+|------------------------|-------------|-------------|
+| Custo inicial          | 0,00        | R$ 0,00     |
+| Custo mensal           | 38,22       | R$ 198,74   |
+| Custo anual (12 meses) | 458,64      | R$ 2.384,93 |
+
+> Cotacao de referencia utilizada: **1 USD = R$ 5,20**.
+
+> 💡 Não há custos iniciais. O modelo segue o padrão **pay-as-you-go** da AWS.
+
+---
+
+### 📦 Serviços Utilizados
+
+#### 🌐 Amazon VPC (Virtual Private Cloud)
+
+| Item              | Detalhes                    |
+|-------------------|----------------------------|
+| Custo mensal      | 26,07 USD                  |
+| Custo mensal (BRL)| R$ 135,56                  |
+| Região            | América do Sul (São Paulo) |
+| Conexões VPN      | 15 Site-to-Site            |
+| Dias considerados | 22 dias úteis/mês          |
+
+Responsável pela criação da rede virtual na nuvem, permitindo comunicação segura entre o ambiente **on-premises** e a AWS.
+
+---
+
+#### 🗄️ Amazon S3 (Simple Storage Service)
+
+| Item              | Detalhes                    |
+|-------------------|----------------------------|
+| Custo mensal      | 12,15 USD                  |
+| Custo mensal (BRL)| R$ 63,18                   |
+| Região            | América do Sul (São Paulo) |
+| Armazenamento     | 300 GB (S3 Standard)       |
+
+Utilizado para armazenamento de backups e dados, garantindo alta durabilidade e disponibilidade.
+
+---
+
+### 📊 Estimativa Visual
+
+![Estimativa](images/11.%20estimativa.PNG)
+🔗 **Estimativa detalhada no AWS Pricing Calculator:**
+[Acessar simulação de custos](https://calculator.aws/#/estimate?id=3669f4422e66cd01dd7ee7429bf5589141411c06)
+
+---
+
+### 📌 Observações
+
+- Os valores são estimativas e podem variar conforme o uso real.
+- Custos adicionais podem surgir com:
+  - Transferência de dados
+  - Requisições ao S3
+  - Expansão da infraestrutura
+
 ---
 
 ## 🌐 Acesso Remoto
