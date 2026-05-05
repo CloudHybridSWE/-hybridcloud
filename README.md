@@ -5,7 +5,8 @@
 - [2. A montagem do ambiente local estrutura a base física da rede](#sec-2)
 - [3. Active Directory, DHCP e Segmentação de Rede](#sec-3)
 - [4. Integração com a AWS](#sec-4)
-- [7. Documentação da Infraestrutura](#sec-7)
+- [5. Documentação da Infraestrutura](#sec-5)
+- [6. Documentação da Infraestrutura](#sec-7)
 
 <a id="sec-1"></a>
 # 📌 1. O levantamento de requisitos estabelece a fundação da arquitetutura híbrida.
@@ -396,14 +397,62 @@ Destino: 10.0.0.0/16 → Gateway: VPN Tunnel
 ![Conexão VPN](images/9.%20tunnel.png)
 
 
+---
+
+#  5. Backup automatizado
+
+Implementado procedimento de backup automatizado do ambiente on-premises para Amazon S3, empregando `AWS CLI`, scripts PowerShell e Agendador de Tarefas do Windows para sincronização incremental e agendada.
+
+
+
+## 🧱 Arquitetura da Solução
+
+On-Premises (Windows Server)
+↓
+Script PowerShell (.ps1)
+↓
+AWS CLI
+↓
+Amazon S3 (Bucket de Backup: `s3://backup-ti-techsol-2026`)
+
+---
+
+## Implementação e testes
+
+
+
+### 1. Criação do script ⚙️
+
+  - **Arquivo PowerShell (`.ps1`)** responsável por sincronizar o diretório de origem com o bucket S3. Exemplo de comando: **`aws s3 sync <diretório> s3://backup-ti-techsol-2026`**.
+
+![Backup1](images/13.%20bkp1.PNG)
+
+### 2. Teste de execução 🔎
+
+  - **Execução manual via PowerShell** para **validação do upload** e **verificação da integridade** dos objetos.
+
+![Backup2](images/14.%20bkp1.PNG)
+
+### 3. Resultado ✅
+
+  - **Backup concluído e validado:** objetos sincronizados com sucesso no bucket S3 **`s3://backup-ti-techsol-2026`**. Arquivos de T.I armazenados e disponíveis conforme **política de retenção**.
+
+Imagens do teste de envio:
+
+![Backup3](images/15.%20bkp1.PNG)
+
+
+
 
 
 
 
 <a id="sec-7"></a>
-#  7. Documentação da Infraestrutura
+#  6. Documentação da Infraestrutura
 
 Abaixo estão os documentos contendo a configuração de rede da infraestrutura, incluindo endereçamento IP, máscaras, VLANs e serviços utilizados na nuvem.
+
+
 
 ## 🖥️ 1. T.I
 [Acessar documentação](https://docs.google.com/spreadsheets/d/1f2WQca90ACLv3GuLH0KYVGViBtsSL65fSalYwBg82h4)
