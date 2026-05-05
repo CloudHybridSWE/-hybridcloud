@@ -5,7 +5,7 @@
 - [2. A montagem do ambiente local estrutura a base física da rede](#sec-2)
 - [3. Active Directory, DHCP e Segmentação de Rede](#sec-3)
 - [4. Integração com a AWS](#sec-4)
-- [5. Documentação da Infraestrutura](#sec-5)
+- [5. Configuração de backup e criptografia](#sec-5)
 - [6. Documentação da Infraestrutura](#sec-7)
 
 <a id="sec-1"></a>
@@ -399,7 +399,8 @@ Destino: 10.0.0.0/16 → Gateway: VPN Tunnel
 
 ---
 
-#  5. Backup automatizado
+<a id="sec-5"></a>
+#  5. Configuração de backup e criptografia
 
 Implementado procedimento de backup automatizado do ambiente on-premises para Amazon S3, empregando `AWS CLI`, scripts PowerShell e Agendador de Tarefas do Windows para sincronização incremental e agendada.
 
@@ -417,7 +418,7 @@ Amazon S3 (Bucket de Backup: `s3://backup-ti-techsol-2026`)
 
 ---
 
-## Implementação e testes
+# Implementação e testes
 
 
 
@@ -442,7 +443,31 @@ Imagens do teste de envio:
 ![Backup3](images/15.%20bkp1.PNG)
 
 
+# Automatização pelo sistema de agendamento do Windows
 
+### 1. Criação da tarefa agendada ⏰
+
+- Utilizado o **Agendador de Tarefas do Windows** para automatizar a execução do script de backup.
+- Configurado o gatilho (**Trigger**) para execução **mensal**, no **dia 1 de cada mês às 18:00**.
+- A opção **Enabled** foi ativada para manter a tarefa em funcionamento.
+
+![aut](images/16.%20aut1.PNG)
+
+### 2. Configuração da ação ⚙️
+
+- Definida a ação como **"Start a program"**, utilizando o executável do PowerShell.
+- Configuração aplicada:
+
+```text
+powershell.exe
+-ExecutionPolicy Bypass
+D:\TI\3. Scripts\0. aws
+```
+
+- O diretório de execução foi apontado para o local onde o script está armazenado.
+- Essa configuração permite a execução do arquivo `.ps1` mesmo em ambientes com restrições de política de execução.
+
+![aut](images/16.%20aut1.PNG)
 
 
 
