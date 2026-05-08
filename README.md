@@ -467,10 +467,6 @@ D:\TI\3. Scripts\0. aws
 - O diretório de execução foi apontado para o local onde o script está armazenado.
 - Essa configuração permite a execução do arquivo `.ps1` mesmo em ambientes com restrições de política de execução.
 
-![aut](images/16.%20aut1.PNG)
-
-
-
 
 <a id="sec-7"></a>
 #  6. Documentação da Infraestrutura
