@@ -495,6 +495,6 @@ Abaixo estão os documentos contendo a configuração de rede da infraestrutura,
 ---
 
 ## 🏗️ 4. Infraestrutura Isolada
-[Acessar documentação](https://drive.google.com/file/d/1bX4C4a2ECAayJ-Dx55k4SIlZ3QC6ihVG/view)
+[Acessar documentação]([https://drive.google.com/file/d/1bX4C4a2ECAayJ-Dx55k4SIlZ3QC6ihVG/view](https://docs.google.com/spreadsheets/d/1CMYrxUVsRePG3rniU5kj9cltHHiGqwtVyHHFzMRS7nc/edit?usp=sharing))
 
 ---
