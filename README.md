@@ -47,7 +47,7 @@ Esta seção apresenta a estimativa de custos para utilização da infraestrutur
 
 > Cotacao de referencia utilizada: **1 USD = R$ 5,20**.
 
-> 💡 Não há custos iniciais. O modelo segue o padrão **pay-as-you-go** da AWS.
+> 💡 Não há custos iniciais. O modelo segue o padrão **pay-as-you-go** da AWS, ou seja, **"pagamento conforme o uso"**.
 
 ---
 
@@ -143,12 +143,64 @@ A infraestrutura interna é composta por:
 - Gerenciamento de usuários e dispositivos
 - Controle de permissões e autenticação centralizada
 
-### 🔹 Servidor de Monitoramento
+# Especificações do Servidor
 
+| Componente | Especificação |
+|---|---|
+| Modelo do servidor | Dell PowerEdge T160 |
+| Formato | Torre |
+| Processador | Intel® Xeon® 6 Performance 6353P |
+| Frequência base | 2.7 GHz |
+| Núcleos / Threads | 8 núcleos / 16 threads |
+| Cache | 24 MB |
+| Turbo Boost | Suportado |
+| TDP | 65 W |
+| Memória instalada | 16 GB UDIMM |
+| Velocidade da memória | 5600 MT/s |
+| Tipo de memória | DDR5 Single Rank BCC |
+| Armazenamento | 2 TB HDD SATA |
+| Velocidade do disco | 7.2K RPM |
+| Interface do disco | SATA 6 Gbps |
+| Formato do disco | 3.5" |
+| Sistema Operacional | Windows Server 2025 Essentials |
+| Licenciamento SO | 10 CORE, FI, sem mídia, sem CAL, multilíngue |
+| Aplicação indicada | Servidor de arquivos, ERP, backup, aplicações corporativas e virtualização leve |
+| Categoria | Servidor corporativo de entrada/intermediário |
+| Fabricante | Dell Technologies |
+| Linha do processador | Intel Xeon Processor Family |
+
+### 🔹 Servidor de Monitoramento
+# Especificações do Servidor de Monitoramento
+
+| Componente | Especificação |
+|---|---|
+| Modelo do servidor | Lenovo ThinkSystem ST50 V2 |
+| Formato | Torre |
+| Processador | Intel Xeon E-2324G |
+| Núcleos / Threads | 4 núcleos / 4 threads |
+| Frequência base | 3.1 GHz |
+| Frequência turbo | Até 4.6 GHz |
+| Cache | 8 MB |
+| Memória instalada | 16 GB DDR4 ECC |
+| Armazenamento | 2 TB HDD |
+| Interface do disco | SATA |
+| Fonte de alimentação | 500 W |
+| Sistema Operacional | Debian 13 |
+| Garantia | 3 anos Onsite |
+| Aplicação | Monitoramento de rede, servidores e serviços |
+| Capacidade recomendada | Até 50–100 hosts monitorados |
+| Ferramentas indicadas | Zabbix, Grafana, Prometheus, Uptime Kuma |
+| Categoria | Servidor SMB / entrada corporativa |
+| Fabricante | Lenovo |
+| Virtualização | Suporte básico para Proxmox, KVM e Docker |
+| Rede | Monitoramento SNMP, ICMP, HTTP, TCP, serviços Linux/Windows |
+| Indicação de uso | Ambiente de monitoramento 24x7 com baixo consumo energético |
 
 - Monitoramento da rede
 - Monitoramento de servidores
 - Supervisão de disponibilidade dos serviços
+
+
 
 ### 🔹 Rede Interna
 
@@ -467,6 +519,7 @@ D:\TI\3. Scripts\0. aws
 - O diretório de execução foi apontado para o local onde o script está armazenado.
 - Essa configuração permite a execução do arquivo `.ps1` mesmo em ambientes com restrições de política de execução.
 
+![aut](images/17-auth.png)
 
 <a id="sec-7"></a>
 #  6. Documentação da Infraestrutura
@@ -491,6 +544,6 @@ Abaixo estão os documentos contendo a configuração de rede da infraestrutura,
 ---
 
 ## 🏗️ 4. Infraestrutura Isolada
-[Acessar documentação](https://docs.google.com/spreadsheets/d/1CMYrxUVsRePG3rniU5kj9cltHHiGqwtVyHHFzMRS7nc/edit?usp=sharing)
+[Acessar documentação](https://drive.google.com/file/d/1bX4C4a2ECAayJ-Dx55k4SIlZ3QC6ihVG/view)
 
 ---
