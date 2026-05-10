@@ -168,7 +168,7 @@ A infraestrutura interna é composta por:
 | Categoria | Servidor corporativo de entrada/intermediário |
 | Fabricante | Dell Technologies |
 | Linha do processador | Intel Xeon Processor Family |
-
+---
 ### 🔹 Servidor de Monitoramento
 # Especificações do Servidor de Monitoramento
 
@@ -218,7 +218,7 @@ O tráfego interno passa pelo firewall antes de sair para a internet, garantindo
 <a id="sec-3"></a>
 # 3. Active Directory, DHCP e Segmentação de Rede
 
-O **:contentReference[oaicite:0]{index=0}** centraliza o controle de acesso e a gestão de identidades dentro da infraestrutura.
+O **[Active Directory](#sec-3)** centraliza o controle de acesso e a gestão de identidades dentro da infraestrutura.
 
 O serviço de **DHCP** foi centralizado no **Windows Server**, permitindo integração direta com o Active Directory e o **DNS**, garantindo automação, consistência e facilidade na administração da rede.
 
@@ -318,9 +318,24 @@ Foram criadas **GPOs (Group Policy Objects)** para aplicar configurações e res
 
 ## 🖥️ Virtualização (Hypervisor)
 
-Foi criado um ambiente de virtualização utilizando um hypervisor para simular o ambiente on-premises, com uma máquina rodando **:contentReference[oaicite:1]{index=1}**.
+Foi criado um ambiente de virtualização utilizando um hypervisor para simular o ambiente on-premises, com uma máquina rodando **[Hypervisor](#sec-3)**.
 
 ![HYPERVISOR](images/6.%20HYPERVISOR.PNG)
+
+| Componente | Especificação da VDI |
+|---|---|
+| Hospedagem | Windows Server 2025 Essentials com Hypervisor |
+| Sistema Operacional da VDI | Debian 13 |
+| Usuários simultâneos | 1 usuário |
+| vCPU | 2 vCPUs |
+| Memória RAM dedicada | 5 GB |
+| Gerenciamento de memória | Upscaling dinâmico de memória utilizando recursos do host Windows Server caso o consumo ultrapasse os 5 GB configurados |
+| Armazenamento | 150 GB |
+| Tipo de disco virtual | VHDX |
+| Interface de disco | SATA Virtual |
+| Rede | Adaptador de rede virtual |
+| Tipo de virtualização | Hypervisor |
+
 
 ## 📁 Estrutura de Pastas
 
